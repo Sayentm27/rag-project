@@ -17,3 +17,8 @@ if not GEMINI_API_KEY:
     sys.exit(1)
 
 app = FastAPI()
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
