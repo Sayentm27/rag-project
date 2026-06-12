@@ -29,5 +29,10 @@ def health():
 def test_gemini():
     client = genai.Client(api_key=GEMINI_API_KEY)
     model = "gemini-2.5-flash"
-    response = client.models.generate_content(model=model, contents="Explain what a LLM is and how it works.")
-    return {"response": response.text}
+    outline_prompt = "Draft a short outline of a blog post about using a RAG system."
+    response = client.models.generate_content(model=model, contents=outline_prompt)
+    outline_result = response.text
+    blog_prompt = "Expand from the outline to write a blog post focusing on the benefits of using a RAG system based on the following outline: " + outline_result
+    blog_response = client.models.generate_content(model=model, contents=blog_prompt)
+    blog_result = blog_response.text
+    return {"response": blog_result}

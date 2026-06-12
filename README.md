@@ -29,3 +29,12 @@ This project will be built incrementally each week.
 - the function takes the hardcoded prompt and displays the text response as a JSON
 - learned that using the AI can sometimes give outdated information, so it's important to double chack and go over code, and make sure that information is up to date
 
+## Multi-Step Execution (WEEK 6)
+
+- with implementing multi-step execution for AI, Gemini is given two prompts to give an acurate and detailed response tailored precisely to what the user needs
+    - the first is an outline prompt for background details and important information that the AI should keep in mind for the next response or prompts so it can learn
+    - the second prompt asks the AI to expand on the previous response the AI gave
+- this seperation, or multi-step execution is important because it breaks down the process to give the user more control over what information is being given, overall allowing a more precise response to what the user wanted to begin with
+- essentially, this allows complete control over the process so the AI can create a structure with higher quality that the user likes best
+
+- my multi-step execution specifically requests an outline for a blog and then expand on the information from the outine, but focusing on the benefits of the information requested
