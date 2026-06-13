@@ -38,3 +38,11 @@ This project will be built incrementally each week.
 - essentially, this allows complete control over the process so the AI can create a structure with higher quality that the user likes best
 
 - my multi-step execution specifically requests an outline for a blog and then expand on the information from the outine, but focusing on the benefits of the information requested
+
+##Validating User Input and AI Output
+
+- input validation is important because users can send empty, broken, or malicious input, which can harm the system
+- output validation is important because the AI models can hallucinate or return bad, incomplete, or confusing answers
+- validation prevents these problems by enforcing guidlines
+- a second AI model is used to review responses as a way to validate the inputs and outputs
+- if the second AI needed to improve the response from the first AI it can provide feedback on what to improve
